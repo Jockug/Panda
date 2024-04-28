@@ -16,6 +16,7 @@ $(".load-more").on("click", function() {
          page++;
          moving = false;
        });
+       $('.o_clube')[0].scrollIntoView();
      });
    }, 2000);
  }
