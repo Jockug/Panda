@@ -26,7 +26,6 @@ body{
 .header{
     background-image: url('img/красная_панда_затемненная.png');
     background-position: center;
-    position: absolute;
     width: 100%;
     background-color: black;
     background-size: cover;
@@ -94,3 +93,40 @@ body{
 	.load-more.disabled:before{
 		transform: translate(-50%, -50%) rotate(135deg) rotateY(180deg);
 	}
+.o_clube{
+        background-color: white;
+        width: 99%;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+.o_clube h1{
+        text-align: center;
+    }
+.o_clube p{
+        font-size: 23px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: justify;
+    }
+.dostijenia{
+    background-color: white;
+        width: 99%;
+        margin-bottom: 7%;
+}
+.dostijenia h1{
+    text-align: center;
+}
+.dostijenia p{
+    font-size: 23px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: justify;
+}
+.img_dost{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img_dost p{
+    text-align: center;
+}
