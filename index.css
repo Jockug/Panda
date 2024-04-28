@@ -122,11 +122,8 @@ body{
         margin-right: 10px;
         text-align: justify;
 }
-.img_dost{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.img_dost p{
-    text-align: center;
+.img_dost1{
+    margin-left: 10%;
+    display: inline-flex;
+    justify-content: space-between;
 }
