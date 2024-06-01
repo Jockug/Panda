@@ -77,7 +77,7 @@ modalTrigger2.addEventListener("click", function () {
     }
 
     // позиционируем наше окно по середине, где 175 - половина ширины модального окна
-    modalActive2.style.left = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
+    modalActive2.style.right = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
 });
 modalClose2.addEventListener("click", function () {
     modalBackground2.style.display = "none";
