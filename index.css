@@ -155,7 +155,7 @@ body{
         align-items: end;
         position: fixed;
         padding-right: 20px;
-        padding-bottom: 100000px;
+        padding-bottom: 600px;
     }
 }
 body {
@@ -242,5 +242,5 @@ body {
 }
 .img_str{
     width: 50%;
-    height: 50%px;
+    height: 50%;
 }
