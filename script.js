@@ -30,7 +30,7 @@ modalTrigger.addEventListener("click", function () {
     }
 
     // позиционируем наше окно по середине, где 175 - половина ширины модального окна
-    modalActive.style.left = "calc(50% - " + (50% - scrollbarWidth / 2) + "px)";
+    modalActive.style.right = "calc(50% - " + (50% - scrollbarWidth / 2) + "px)";
 });
 modalClose.addEventListener("click", function () {
     modalBackground.style.display = "none";
@@ -54,7 +54,6 @@ const modalTrigger2 = document.getElementsByClassName("triger2")[0];
 
 // получаем ширину отображенного содержимого и толщину ползунка прокрутки
 const windowInnerWidth2 = document.documentElement.clientWidth;
-const scrollbarWidth2 = parseInt(window.innerWidth) - parseInt(document.documentElement.clientWidth);
 
 // привязываем необходимые элементы
 const bodyElementHTML2 = document.getElementsByTagName("body")[0];
