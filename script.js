@@ -30,7 +30,7 @@ modalTrigger.addEventListener("click", function () {
     }
 
     // позиционируем наше окно по середине, где 175 - половина ширины модального окна
-    modalActive.style.left = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
+    modalActive.style.left = "calc(50% - " + (50% - scrollbarWidth / 2) + "px)";
 });
 modalClose.addEventListener("click", function () {
     modalBackground.style.display = "none";
@@ -77,7 +77,7 @@ modalTrigger2.addEventListener("click", function () {
     }
 
     // позиционируем наше окно по середине, где 175 - половина ширины модального окна
-    modalActive2.style.right = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
+    modalActive2.style.right = "calc(50% - " + (50% - scrollbarWidth / 2) + "px)";
 });
 modalClose2.addEventListener("click", function () {
     modalBackground2.style.display = "none";
