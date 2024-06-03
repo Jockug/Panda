@@ -1,246 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="preload" href="VividSans-Regular.otf" as="font">
+  <link rel="stylesheet" href="VividSans-Regular.otf">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="modalBackground">
+    <div class="modalActive">
+        <div class="modalClose">
+            <img src="img/cross.svg">
+        </div>
+        <div class="modalWindow"> 
+          <h3 style='margin-bottom: 50px;'>Запись на занятия в Клубе "Сяо Синмао"</h3>
+          <h4>Как к вам обращаться?</h4>
+          <input type="text" placeholder="Ваш ответ" style="font-size: 18px; margin-bottom: 35px;"> 
 
-@font-face {
-    font-family: 'VividSans Regular';
-    src: url('VividSans-Regular.otf');
-}
-body{
-    font-size: 20px;
-    font-family: 'VividSans Regular';
-}
-.navigation{
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 90px;
-}
-.nav{
-    display: flex;
-    justify-content: space-around;
-}
-.bc_navigation{
-    width: 100%;
-    background-color: black;
-}
-.header{
-    background-image: url('img/красная_панда_затемненная.png');
-    background-position: center;
-    width: 100%;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-}
-
-.text_for_head{
-    color: white;
-    font-size: 270%;
-    text-align: center;
-}
-.text_under_head{
-    color: white;
-    font-size: 150%;
-    text-align: center;
-}
-.time{
-    color: white;
-    font-size: 120%;
-    text-align: center;
-}
-.load-more {
-	display: block;
-	cursor: pointer;
-    width: 40px;
-    height: 40px; 
-    margin-left: 32px; 
-}
-.load-more:before{
-		display: block;
-		content: '';
-		width: 30px; 
-        height: 30px;
-		border-width: 2px;
-		border-style: solid;
-		border-color: transparent;
-		border-bottom-color: #fff;  
-		border-right-color: #fff;
-		border-radius: 0 0 5px 0;
-		transform: translate(-50%, -50%) rotate(45deg);
-		transition: all .4s ease-in-out;
-	}
-	.load-more.active:before {
-		border-radius: 50%;
-		animation:
-			.3s rotate .3s linear forwards infinite;
-	}
-		@keyframes rotate {
-			to {
-				transform: translate(-50%, -50%) rotate(360deg);
-			}
-		}
-		@keyframes rotate2 {
-			to {
-				transform: translate(-50%, -50%) rotate(-315deg);
-			}
-		}
-	.load-more.disabled:before{
-		transform: translate(-50%, -50%) rotate(135deg) rotateY(180deg);
-	}
-.o_clube{
-        background-color: white;
-        width: 99%;
-        margin-top: 7%;
-        margin-bottom: 7%;
-    }
-.o_clube h1{
-        text-align: center;
-    }
-.o_clube p{
-        font-size: 23px;
-        margin-left: 10px;
-        margin-right: 10px;
-        text-align: justify;
-    }
-.dostijenia{
-    background-color: white;
-        width: 99%;
-        margin-bottom: 7%;
-}
-.dostijenia h1{
-    text-align: center;
-}
-.dostijenia p{
-    font-size: 23px;
-        margin-left: 10px;
-        margin-right: 10px;
-        text-align: justify;
-}
-
-.img_dost{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.img_dost p{
-    text-align: center;
-}
-.nav a:hover{
-    text-decoration: underline;
-}
-.raspisanie h1{
-    text-align: center;
-    display: block;
-}
-.trenera {
-    display: flex;
-    justify-content: center;
-}
-.icon{
-    display: none;
-    justify-content: right;
-    align-items: end;
-    position: fixed;
-    padding-right: 20px;
-    padding-bottom: 10%;
-}
-@media screen and (max-width: 700px){
-    .icon{
-        display: none;
-        justify-content: right;
-        align-items: end;
-        position: fixed;
-        padding-right: 20px;
-        padding-bottom: 2000px;
-    }
-}
-body {
-    overflow-x: hidden;
-}
-.modalBackground {
-    display: none;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    /* указываем z-индекс для корректного наслаивания */
-    z-index: 1;
-}
-.modalActive {
-    position: absolute;
-    width: 350px;
-    height: 495px;
-    top: calc(50% - 250px);
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    cursor: default;
-    padding: 40px 20px;
-}
-.modalClose {
-    font-family: var(--font-regular);
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-/* сама картинка кнопочки закрытия */
-.modalClose img {
-    margin: 3px;
-    width: 24px;
-    height: 24px;
-}
-.modalWindow {
-    position: relative;
-}
-.modalBackground2 {
-    display: none;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    /* указываем z-индекс для корректного наслаивания */
-    z-index: 1;
-}
-.modalActive2 {
-    position: absolute;
-    width: 350px;
-    height: 495px;
-    top: calc(50% - 250px);
-    left: calc(50% - 175px);
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    cursor: default;
-    padding: 40px 20px;
-}
-.modalClose2 {
-    font-family: var(--font-regular);
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-/* сама картинка кнопочки закрытия */
-.modalClose2 img {
-    margin: 3px;
-    width: 24px;
-    height: 24px;
-}
-.modalWindow2 {
-    position: relative;
-}
-.img_str{
-    width: 50%;
-    height: 50%;
-}
+          <h4>Ваш номер телефона</h4>
+          <input type="text" placeholder="Ваш ответ" style="font-size: 18px; margin-bottom: 50px;">
+          <p style="margin-left: 40%;">
+            <a href="#" class="triger2">
+          <img src="img/chevron-right-svgrepo-com.png" alt="" class="img_str">
+          </a>
+        </p>
+        </div>
+    </div>
+</div>
+<div class="modalBackground2">
+  <div class="modalActive2">
+      <div class="modalClose2">
+          <img src="img/cross.svg">
+      </div>
+      <div class="modalWindow2"> 
+        <h4>Какие занятия вас интересуют?</h4>
+        <div style="width:100%; height:300px; overflow:auto; border:solid 1px #C3E4FE; margin-bottom: 30px;">
+          <input type='checkbox'>Гимнастика для малышей (2-3 года)
+          <br>
+          <input type='checkbox'>ОФП (общая физическая подготовка) с элементами ушу таолу (дети 4-5 лет)
+          <br>
+          <input type='checkbox'>Ушу таолу (дети 6-7 лет)
+          <br>
+          <input type='checkbox'>Ушу таолу (дети 8-9 лет)
+          <br>
+          <input type='checkbox'>Ушу, тайцзицуань (взрослые, в том числе пинсионеры)
+          <br>
+          <input type='checkbox'>Каратэ 5-6 лет
+          <br>
+          <input type='checkbox'>Каратэ 8-10 лет
+          <br>
+          <input type='checkbox'>Воскресное плавание
+          <br>
+          <input type='checkbox'>Ушу саньда 8-10 лет (контактное направление ушу)
+        </div>
+        <div style="text-align: center;">
+        <button>Отправить форму</button>
+      </div>
+      </div>
+  </div>
+</div>
+  <div class="bc_navigation">
+    <div class="navigation">
+    <nav class="nav">
+      <a class="nav-link active" href="#o_clube" style="color: white;">О клубе</a>
+      <a class="nav-link" href="#" style="color: white;">Абонементы</a>
+      <a class="nav-link" href="#dostijenia" style="color: white;">Достижения</a>
+      <a class="nav-link" href="#" style="color: white;">Контакты</a>
+      </nav>  
+    </div>
+  </div>
+  <div class="icon" style="width: 100%; height: 100%;" id = 'icon-container'><a href="#" class="triger"><img src="img/ЗаписьNew.png" alt=""></a></div>
+  <div class="header">
+    <div>
+      <p style="text-align: center;"><img src="img/мимолистичная_лога.png" alt="ошибка сети" style="width: 200px;"></p>
+      <p class="text_for_head">Красная панда</p>
+      <p class="text_under_head">ул. Зайцева 65А, г. Петрозаводск</p>
+      <p class="time">8:00–22:00</p>
+    </div>
+    <div>
+      <span class="load-more"></span>
+    </div>
+  </div>
+  <div class="o_clube" id="o_clube">
+      <h1 style="color: black;"><b>О клубе</b></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis minus fuga explicabo facilis modi cupiditate ut iure, tenetur consequuntur at asperiores nostrum quas adipisci officiis maiores illo? Labore, debitis tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis hic eligendi laborum nam ipsam, ea necessitatibus beatae magni voluptatibus laudantium consequuntur facere aliquid tenetur quidem similique, ipsum minima sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, et cumque optio tempore repellat debitis a aliquid accusantium, tenetur animi cum obcaecati repellendus libero quia omnis! Nostrum quisquam asperiores quo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam at assumenda voluptatum modi, repellendus deserunt non mollitia ullam fugit molestias fugiat cupiditate sapiente iure quibusdam voluptatibus dicta ex labore!</p>
+      <marquee behavior="alternate" direction="" scrollamount="10">
+        <img src="img/Карелия.jpg" alt="" height="300">
+        <img src="img/Мир.jpg" alt="" height="300">
+        <img src="img/СЗФО.jpg" alt="" height="300">
+        <img src="img/Россия.jpg" alt="" height="300">
+        <img src="img/Тренировки в лагере.jpg" alt="" height="300">
+      </marquee>
+  </div>
+  <div class="raspisanie">
+    <h1 style="color: black;"><b>Расписание</b></h1>
+    <p style="text-align: center;"><img src="img/расписание.png" alt="ошибка сети" style="width: 90%;"></p>
+</div>
+  <div class="dostijenia" id="dostijenia">
+    <h1 style="color: black;"><b>Достижения</b></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, numquam esse ab rem vitae eius quos! Temporibus ut dolor eius, error saepe, esse, tempora provident nulla sit in explicabo doloremque?</p>
+    <div class="img_dost">
+        <div><img src="img/Россия.jpg" alt="ошибка сети"  class="pull-left" style="width: 600px; object-fit: cover;"> <p>Чемпионат и Первенство России</p></div>
+        <div><img src="img/Мир.jpg" alt="ошибка сети"  class="pull-right" style="width: 580px; object-fit: cover;"><p>Чемпионат мира по Тайцзицюань</p></div>
+        <div><img src="img/СЗФО.jpg" alt="ошибка сети"  class="img-fluid" style="width: 600px; object-fit: cover;"><p>Чемпионат и Первенство СЗФО</p></div>
+        <div><img src="img/Карелия.jpg" alt="ошибка сети"  class="img-fluid" style="width: 610px; object-fit: cover;"><p>Чемпионат и Первенство Карелии</p></div>
+    </div>
+  </div>
+  <div class="trenera">
+    <h1 style="color: black;"><b>Наши тренеры</b></h1>
+  </div>
+  <script src="script.js"></script>
+  <script type="text/javascript" src='main.js'></script>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
