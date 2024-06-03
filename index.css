@@ -152,10 +152,9 @@ body{
     .icon{
         display: none;
         justify-content: right;
-        align-items: end;
-        position: absolute;
+        align-items: flex-end;
+        position: fixed;
         padding-right: 20px;
-        padding-bottom: 200px;
     }
 }
 body {
