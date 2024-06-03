@@ -147,6 +147,15 @@ body{
     position: fixed;
     padding-right: 5px;
 }
+@media screen and (max-width:1200px){
+    .icon{
+    display: none;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    padding-right: 5px;
+    }
+}
 body {
     overflow-x: hidden;
 }
